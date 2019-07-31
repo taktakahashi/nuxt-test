@@ -1,9 +1,11 @@
 <template>
   <div>
+    <nuxt-link to="/articles">back</nuxt-link>
     {{ article }}
     <ul>
-      <li v-for="unit in unitables" :key="`unit-${article.id}-${unit.id}`">
+      <li v-for="unit in unitables" :key="`unit-${article.id}-${unit.unitableType}-${unit.id}`">
         {{ unit }}
+        {{ `unit-${article.id}-${unit.id}` }}
       </li>
     </ul>
   </div>
