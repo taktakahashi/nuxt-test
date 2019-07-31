@@ -1,8 +1,25 @@
 <template>
   <div>
+    {{ rankings }}
+    <img src="https://i.gyazo.com/ac95945e541bf4803f8976c8bdea1eaa.jpg" />
     <nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    rankings() {
+      return this.$store.state.rankings
+    }
+  },
+  methods: {
+    articleLink(id) {
+      return `/articles/${id}`
+    }
+  }
+}
+</script>
 
 <style>
 html {
